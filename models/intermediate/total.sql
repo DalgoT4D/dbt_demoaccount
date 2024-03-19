@@ -2,12 +2,12 @@
   materialized='table'
 ) }}
 
-
-SELECT Country_Region,
-       SUM(Confirmed) AS Total_Confirmed,
-       SUM(Recovered) AS Total_Recovered,
-       SUM(Active) AS Total_Active,
-       SUM(Deaths) AS Total_Deaths
+SELECT "Country_Region",
+       SUM(CAST("Confirmed" AS INTEGER)) AS Total_Confirmed,
+       SUM(CAST("Recovered" AS INTEGER)) AS Total_Recovered,
+       SUM(CAST("Active" AS INTEGER)) AS Total_Active,
+       SUM(CAST("Deaths" AS INTEGER)) AS Total_Deaths
 FROM {{ source('source_demo', 'covid19') }}
-GROUP BY Country_Region
-ORDER BY Total_Confirmed DESC;
+GROUP BY "Country_Region"
+ORDER BY Total_Confirmed DESC
+
