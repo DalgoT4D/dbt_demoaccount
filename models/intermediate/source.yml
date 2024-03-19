@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: source_demo
+    schema: demostaging
+    tables:
+      - name: covid19
+        identifier: covid_19
+        description: "Areas of working."
+      - name: diabetes
+        identifier: diabetes
+        description: "Daily basis action for field workers."
+
