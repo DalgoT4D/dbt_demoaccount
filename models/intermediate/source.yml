@@ -11,3 +11,10 @@ sources:
         identifier: diabetes
         description: "Daily basis action for field workers."
 
+  - name: source_csv
+    schema: spike_staging
+    tables:
+      - name: fifa21_raw_data
+        identifier: fifa21_raw_data
+        description: "FIFA 21 raw data for testing purposes."
+
